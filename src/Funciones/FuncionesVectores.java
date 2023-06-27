@@ -61,5 +61,29 @@ public class FuncionesVectores {
 			System.out.println(vector[j]+ " ");
 		}
 	}
+
+	
+	public static boolean paralelo (int v1[], int v2[]) {
+		boolean paralelo=true;
+		double factor=v1[0]/(double)v2[0];
+		for(int i=1;i< v1.length && paralelo==true; i++) {
+			if (v1[i]/(double)v2[i]!=factor) {
+				paralelo=false;
+			}
+		}
+		return paralelo;
+	}
+	
+	public static boolean capicua (int v[]) {
+		boolean capicua =true;
+		for (int i=0, j=v.length-1; i<j; i++, j--) {
+			if (v[i]!=v[j])
+					capicua=false;
+		}
+		return capicua;		
+	}
+	
+	
 }
+
 
